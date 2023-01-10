@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #235ad1;
+  --primary-gradient: linear-gradient(150deg, #235ad1, #23d1a8);
+}
+
+:root {
+  --text-color: #434343;
+  --border-color: #d2d2d2;
+  --action-border-color: #434343;
+  --main-bg-color: #fff;
+  --action-bg-color: #f9f7f7;
+  --main-bg-img: url('./assets/images/bg-light1.jpg');
+}
+
+/* Класс, добавленный к элементу <html> */
+.dark-mode {
+  --text-color: #e9e9e9;
+  --border-color: #434343;
+  --action-border-color: #e9e9e9;
+  --main-bg-color: #434343;
+  --action-bg-color: #363636;
+  --main-bg-img: url('./assets/images/bg-dark1.jpg');
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+  background: var(--main-bg-img) no-repeat top left/cover;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  min-width: 930px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 60px;
+  padding: 0 30px;
+  background-color: var(--main-bg-color);
+  position: fixed;
+  z-index: 10;
+}
+
+.logo__img {
+  width: 30px;
+  margin-left: 10px;
+}
+
+.logo__text {
+  color: var(--text-color);
+  font-family: 'Fredoka One', cursive;
+  font-size: 30px;
+  font-weight: 400;
+  border-bottom: none;
+  text-transform: lowercase;
+}
+
+.menu__item__link {
+  color: var(--text-color);
+  margin-right: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  display: block;
+  padding: 6px 0;
+  border-bottom: 3px solid var(--main-bg-color);
+  transition: all 0.5s linear;
+}
+
+.menu__item__link.focus {
+  border-bottom: 3px solid var(--action-border-color);
+}
