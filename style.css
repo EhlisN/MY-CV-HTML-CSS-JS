@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: montserrat, sans-serif;
 }
 
 :root {
@@ -11,21 +12,27 @@
 
 :root {
   --text-color: #434343;
-  --border-color: #d2d2d2;
+  --border-color: 210, 210, 210;
   --action-border-color: #434343;
+  --hover-border-color: #afd55d;
   --main-bg-color: #fff;
   --action-bg-color: #f9f7f7;
   --main-bg-img: url('./assets/images/bg-light1.jpg');
+  --btn-color: #eeeeee;
+  --shadow-color: #434343;
 }
 
 /* Класс, добавленный к элементу <html> */
 .dark-mode {
   --text-color: #e9e9e9;
-  --border-color: #434343;
+  --border-color: 67, 67, 67;
   --action-border-color: #e9e9e9;
+  --hover-border-color: #afd55d;
   --main-bg-color: #434343;
   --action-bg-color: #363636;
   --main-bg-img: url('./assets/images/bg-dark1.jpg');
+  --btn-color: #717171;
+  --shadow-color: #e9e9e9;
 }
 
 html {
@@ -61,6 +68,24 @@ a {
   align-items: center;
 }
 
+.btn {
+  background-color: var(--btn-color);
+  border: 1px solid var(--border-color);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: all 0.5s linear;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px 0 var(--shadow-color);
+}
+
+.shadow {
+  box-shadow: 0 0 15px 0 var(--shadow-color);
+}
+
 .header {
   width: 100%;
   height: 60px;
@@ -93,10 +118,48 @@ a {
   text-transform: uppercase;
   display: block;
   padding: 6px 0;
-  border-bottom: 3px solid var(--main-bg-color);
+  border-bottom: 3px solid rgba(var(--border-color), 00);
   transition: all 0.5s linear;
 }
 
 .menu__item__link.focus {
   border-bottom: 3px solid var(--action-border-color);
+}
+
+.menu__item__link:hover {
+  border-bottom: 3px solid var(--hover-border-color);
+}
+
+.burger__menu {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+  .menu.open {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 50px;
+    left: 0;
+    background-color: var(--main-bg-color);
+    box-shadow: 0 15px 10px var(--shadow-color);
+    width: 100vw;
+    align-items: center;
+    padding-bottom: 13px;
+  }
+
+  .burger__menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: url(./assets/icons/menu.png) no-repeat center;
+    cursor: pointer;
+  }
+
+  .burger__menu.open {
+    background-image: url(./assets/icons/close.png);
+  }
 }
