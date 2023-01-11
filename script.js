@@ -23,3 +23,11 @@ menu.addEventListener('click', () => {
   burgerMenu.classList.remove('open');
   menu.classList.remove('open');
 });
+
+document.querySelector('.btn__cv').addEventListener('click', () => {
+  document.querySelector('.cv__download').style.display = 'block';
+});
+
+document.querySelector('.cv__close').addEventListener('click', () => {
+  document.querySelector('.cv__download').style.display = 'none';
+});

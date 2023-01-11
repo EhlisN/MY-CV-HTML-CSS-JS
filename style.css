@@ -1,37 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: montserrat, sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
-:root {
+/* :root {
   --color-primary: #235ad1;
   --primary-gradient: linear-gradient(150deg, #235ad1, #23d1a8);
-}
+} */
 
 :root {
   --text-color: #434343;
+  --text-success-color: #5bbc2e;
   --border-color: 210, 210, 210;
-  --action-border-color: #434343;
-  --hover-border-color: #afd55d;
+  --action-border-color: #5bbc2e;
+  --hover-border-color: #434343;
   --main-bg-color: #fff;
+  --success-bg-color: #5bbc2e;
   --action-bg-color: #f9f7f7;
   --main-bg-img: url('./assets/images/bg-light1.jpg');
-  --btn-color: #eeeeee;
+  --btn-main-color: #eeeeee;
+  --btn-success-color: #5bbc2e;
   --shadow-color: #434343;
 }
 
 /* Класс, добавленный к элементу <html> */
 .dark-mode {
   --text-color: #e9e9e9;
+  --point-text-color: #5bbc2e;
   --border-color: 67, 67, 67;
-  --action-border-color: #e9e9e9;
-  --hover-border-color: #afd55d;
+  --action-border-color: #5bbc2e;
+  --hover-border-color: #e9e9e9;
   --main-bg-color: #434343;
+  --success-bg-color: #5bbc2e;
   --action-bg-color: #363636;
   --main-bg-img: url('./assets/images/bg-dark1.jpg');
-  --btn-color: #717171;
+  --btn-main-color: #717171;
+  --btn-success-color: #5bbc2e;
   --shadow-color: #e9e9e9;
 }
 
@@ -45,7 +53,6 @@ body {
   width: 100%;
   color: var(--text-color);
   background-color: var(--main-bg-color);
-  background: var(--main-bg-img) no-repeat top left/cover;
 }
 
 ul {
@@ -58,7 +65,7 @@ a {
 }
 
 .container {
-  min-width: 930px;
+  max-width: 930px;
   margin: 0 auto;
 }
 
@@ -69,12 +76,18 @@ a {
 }
 
 .btn {
-  background-color: var(--btn-color);
+  background-color: var(--btn-main-color);
+  color: var(--text-color);
   border: 1px solid var(--border-color);
   padding: 5px 10px;
   border-radius: 3px;
   font-weight: 700;
-  transition: all 0.5s linear;
+  transition: box-shadow 0.5s linear;
+}
+
+.btn__success {
+  background-color: var(--btn-success-color);
+  padding: 15px 35px;
 }
 
 .btn:hover {
@@ -82,8 +95,74 @@ a {
   box-shadow: 0 0 15px 0 var(--shadow-color);
 }
 
+/*  */
+.btn__right,
+.btn__left {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2vh;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+
+.btn__right:hover,
+.btn__left:hover,
+.btn__close {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.449);
+  cursor: pointer;
+}
+
+.btn__right {
+  left: 60%;
+}
+
+.btn__left {
+  left: 40%;
+}
+
+.btn__close {
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 1vh;
+  left: 90vw;
+  font-size: 16px;
+}
+/*  */
+
 .shadow {
   box-shadow: 0 0 15px 0 var(--shadow-color);
+}
+
+.success {
+  color: var(--text-success-color);
+}
+
+.title {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 30px;
+}
+
+.line {
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--success-bg-color);
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 40px 0 20px;
+    width: 98%;
+    margin: 0 auto;
+  }
 }
 
 .header {
@@ -102,11 +181,8 @@ a {
 
 .logo__text {
   color: var(--text-color);
-  font-family: 'Fredoka One', cursive;
   font-size: 30px;
-  font-weight: 400;
   border-bottom: none;
-  text-transform: lowercase;
 }
 
 .menu__item__link {
@@ -142,13 +218,13 @@ a {
     display: flex;
     position: absolute;
     flex-direction: column;
-    top: 50px;
+    top: 60px;
     left: 0;
     background-color: var(--main-bg-color);
-    box-shadow: 0 15px 10px var(--shadow-color);
+    box-shadow: 0 10px 10px var(--shadow-color);
     width: 100vw;
     align-items: center;
-    padding-bottom: 13px;
+    padding: 13px 0 10px;
   }
 
   .burger__menu {
@@ -162,4 +238,84 @@ a {
   .burger__menu.open {
     background-image: url(./assets/icons/close.png);
   }
+}
+
+.home {
+  background: var(--main-bg-img) no-repeat top left/cover;
+  padding-top: 100px;
+}
+
+.home__img {
+  height: 500px;
+  width: 50%;
+  background: url(./assets/images/photo2.png) no-repeat bottom/contain;
+}
+
+.home__desc {
+  font-size: 30px;
+}
+
+.home__name {
+  margin: 20px 0;
+  font-size: 50px;
+}
+
+.btn__cv {
+  margin: 30px 0;
+}
+
+.cv__download {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 8, 8, 0.6);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  text-align: center;
+  display: none;
+}
+
+.cv {
+  height: 100%;
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .home__desc {
+    font-size: 22px;
+  }
+  .home__name {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home__desc {
+    max-height: fit-content;
+  }
+  .home .row {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .home__img {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+.about {
+}
+
+.portfolio {
+  background: var(--main-bg-img) no-repeat top left/cover;
+}
+
+.video {
+}
+
+.contact {
+  background: var(--main-bg-img) no-repeat top left/cover;
 }

@@ -9,30 +9,86 @@
   </head>
   <body>
     <header class="header row shadow">
-      <div class="header__logo logo row">
+      <a class="header__logo logo row" href="#home">
         <img class="logo__img" src="./assets/icons/icon.png" alt="logo" />
         <h1 class="logo__text">Natallia Ehlis</h1>
-      </div>
+      </a>
       <nav class="header__menu row">
         <div class="burger__menu"></div>
         <ul class="menu row">
           <li class="menu__item">
-            <a class="menu__item__link focus" href="#">ABOUT</a>
+            <a class="menu__item__link focus" href="#home">HOME</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="#">PORTFOLIO</a>
+            <a class="menu__item__link" href="#about">ABOUT</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="#">VIDEO</a>
+            <a class="menu__item__link" href="#portfolio">PORTFOLIO</a>
           </li>
           <li class="menu__item">
-            <a class="menu__item__link" href="#">CONTACT</a>
+            <a class="menu__item__link" href="#video">VIDEO</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__item__link" href="#contact">CONTACT</a>
           </li>
         </ul>
         <button class="btn mainColor">Dark</button>
       </nav>
     </header>
-    <main></main>
+    <main>
+      <section id="home" class="home">
+        <div class="container row">
+          <div class="home__img"></div>
+          <div class="home__desc">
+            <p>Hello!</p>
+            <h2 class="home__name">
+              I'm <span class="success">Natallia Ehlis</span>
+            </h2>
+            <p>Frontend Developer</p>
+            <button class="btn btn__success btn__cv">Download CV</button>
+            <div class="cv__download">
+              <div class="btn__close cv__close">X</div>
+              <iframe
+                class="cv"
+                src="./assets/cv/CV Natallia Ehlis.pdf"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="container">
+          <div class="title">
+            <h3>About <span class="success">Me</span></h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+      <section id="portfolio" class="portfolio">
+        <div class="container">
+          <div class="title">
+            <h3>My <span class="success">Creative Portfolio</span></h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+      <section id="video" class="video">
+        <div class="container">
+          <div class="title">
+            <h3>My Amazing <span class="success">Video</span></h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="container">
+          <div class="title">
+            <h3>Contact With <span class="success">Me!</span></h3>
+            <div class="line"></div>
+          </div>
+        </div>
+      </section>
+    </main>
     <footer></footer>
     <script src="./script.js"></script>
   </body>
