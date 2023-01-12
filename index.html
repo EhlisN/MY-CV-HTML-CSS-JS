@@ -8,7 +8,7 @@
     <title>Natallia Ehlis</title>
   </head>
   <body>
-    <header class="header row shadow">
+    <header class="header row">
       <a class="header__logo logo row" href="#home">
         <img class="logo__img" src="./assets/icons/icon.png" alt="logo" />
         <h1 class="logo__text">Natallia Ehlis</h1>
@@ -36,6 +36,7 @@
       </nav>
     </header>
     <main>
+      <a class="btn btn__up" href="#home">&#8593;</a>
       <section id="home" class="home">
         <div class="container row">
           <div class="home__img"></div>
@@ -62,6 +63,128 @@
             <h3>About <span class="success">Me</span></h3>
             <div class="line"></div>
           </div>
+          <div class="about__nav row">
+            <button class="way btn about__nav__link btn__success">My Way</button>
+            <button class="education btn about__nav__link">Education</button>
+            <button class="exerience btn about__nav__link">Experience</button>
+            <button class="skills btn about__nav__link">Skills</button>
+            <button class="sertifications btn about__nav__link">Certifications</button>
+          </div>
+          <article class="way about__item about__way shadow">
+            <h5>My Way</h5>
+            <p>
+              Hi, my name is Natallia Ehlis and I am a frontend web developer.
+            </p>
+            <p>
+              For several years, I have been going with the idea of trying
+              myself in development. After reviewing a bunch of YouTube videos,
+              talking with people who work in IT sphere, I have been coming up
+              with the idea to try my hand in IT. I chose the frontend. I think
+              it is awesome to see the result of my code on the screen
+              immediately.
+            </p>
+            <p>
+              In October 2022 I graduated from IT Academy STEP. Where I have
+              learned such of skills as HTML&CSS(HyperText Markup Language &
+              Cascading Style Sheets), JavaScript language, Git & Github,
+              Preprocessor - SASS, LESS, CSS Framework - Bootstrap, Material UI,
+              JS librarie - React and JS Framework Angular.
+            </p>
+            <p>
+              After completing front-end development courses, I continue to make
+              projects myself and study documentation for various technologies,
+              I like to watch YouTube channels Front-end Science, IT-KAMASUTRA
+              and read IT news. In the future, I would like to learn another
+              programming language.
+            </p>
+          </article>
+          <article class="education about__item about__education shadow">
+            <h5>Frontend developer</h5>
+            <div class="row">
+              <div>IT Step Academy</div>
+              <div>December 2021 - October 2022</div>
+            </div>
+            <p>
+              I have learned how to develop web pages using HTML and CSS, I have
+              developed websites with adaptive and semantic layout. I have
+              learned client side scripting using JavaScript, OOP and its core
+              concepts. I have processed and parsed data using JSON, the
+              principles of creating asynchronous API request I have implemented
+              an application in React (TypeScript) I have learned basic
+              knowledge of working with Angular.
+            </p>
+            <hr />
+            <h5>Frontend developer</h5>
+            <div class="row">
+              <div>Fructcode</div>
+              <div>October 2021 - November 2021</div>
+            </div>
+            <p>HTML/CSS, Bootstrap, JavaScript & GIT</p>
+            <hr />
+            <h5>Economics and management at the enterprise</h5>
+            <div class="row">
+              <div>
+                International Institute for the Humanities and Economics
+              </div>
+              <div>September 2006 - June 2010</div>
+            </div>
+          </article>
+          <article class="exerience about__item about__exerience shadow">
+            <h5>Sector Head</h5>
+            <div class="row">
+              <div>LLC "Evrotorg"</div>
+              <div>June 2014 - December 2016</div>
+            </div>
+            <p>
+              I managed a department with a staff of 13 accountants. I
+              supervised the work of economists.
+            </p>
+            <hr />
+            <h5>Accountant</h5>
+            <div class="row">
+              <div>LLC "Evrotorg"</div>
+              <div>December 2010 - June 2014</div>
+            </div>
+            <p>
+              I kept records of inventory items in retail trade. I worked with
+              primary accouting documents (invoices, acts). I exhibited, signed
+              and kept records of the ESCF
+            </p>
+            <hr />
+            <h5>Salesman. Store manager</h5>
+            <div class="row">
+              <div>Store</div>
+              <div>June 2005 - December 2010</div>
+            </div>
+            <p>
+              I consulted buyers. I worked with cash registers. I supervised the
+              products
+            </p>
+          </article>
+          <article class="skills about__item about__skills shadow">
+            <h5>Skills</h5>
+            <div class="skills__desc row"></div>
+          </article>
+          <article class="sertifications about__item about__sertifications shadow">
+            <h5>Sertifications</h5>
+            <div class="skills__certificates row">
+              <div class="certificate shadow">
+                <img src="./assets/images/step.jpg" alt="certificate" />
+              </div>
+              <div class="certificate shadow">
+                <img src="./assets/images/sololern.png" alt="certificate" />
+              </div>
+              <div class="certificate shadow">
+                <img src="./assets/images/HTML_CSS1.jpg" alt="certificate" />
+              </div>
+              <div class="certificate shadow">
+                <img src="./assets/images/GIT1.jpg" alt="certificate" />
+              </div>
+              <div class="certificate shadow">
+                <img src="./assets/images/Bootstrap1.jpg" alt="certificate" />
+              </div>
+            </div>
+          </article>
         </div>
       </section>
       <section id="portfolio" class="portfolio">
@@ -78,6 +201,14 @@
             <h3>My Amazing <span class="success">Video</span></h3>
             <div class="line"></div>
           </div>
+          <iframe
+            class="video__cv shadow"
+            src="https://www.youtube.com/embed/5Xcgm4bszbQ"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
         </div>
       </section>
       <section id="contact" class="contact">
@@ -86,10 +217,51 @@
             <h3>Contact With <span class="success">Me!</span></h3>
             <div class="line"></div>
           </div>
+          <div class="contact__items shadow">
+            <div class="contact__item row">
+              <div class="contact__item__name">E-MAIL</div>
+              <a class="contact__item__link" href="mailto:natasha.ehlis@gmail.com" target="_blank">natasha.ehlis@gmail.com</a>
+            </div>
+            <div class="contact__item row">
+              <div class="contact__item__name">PHONE</div>
+              <a class="contact__item__link" href="tel:+375336617223" target="_blank">+375 33 661 72 23</a></span>
+            </div>
+            <div class="contact__item row">
+              <div class="contact__item__name">TELEGRAM</div>
+              <a class="contact__item__link" href="https://t.me/Natallia_eglis" target="_blank">https://t.me/Natallia_eglis</a>
+            </div>
+            <div class="contact__item row">
+              <div class="contact__item__name">GITHUB</div>
+              <a class="contact__item__link" href="https://github.com/EhlisN" target="_blank">https://github.com/EhlisN</a>
+            </div>
+            <div class="contact__item row">
+              <div class="contact__item__name">LINKEDIN</div>
+              <a class="contact__item__link" href="https://www.linkedin.com/in/natallia-ehlis-b32006223/" target="_blank">https://www.linkedin.com/in/natallia-ehlis-b32006223/</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="footer row">
+      <p>© 2023 Natallia Ehlis</p>
+      <div class="footer__social row">
+        <a href="https://github.com/EhlisN" target="_blank"
+          ><img src="./assets/icons/github2.png" alt="github"
+        /></a>
+        <a href="https://www.linkedin.com/in/natallia-ehlis-b32006223/" target="_blank"
+          ><img src="./assets/icons/linkedin2.png" alt="linkedin"
+        /></a>
+        <a href="https://www.instagram.com/natallia_eglis/" target="_blank"
+          ><img src="./assets/icons/instagram2.png" alt="instagram"
+        /></a>
+        <a href="https://t.me/Natallia_eglis" target="_blank"
+          ><img src="./assets/icons/telegram2.png" alt="telegram"
+        /></a>
+        <a href="mailto:natasha.ehlis@gmail.com"
+          ><img src="./assets/icons/mail2.png" alt="mail"
+        /></a>
+      </div>
+    </footer>
     <script src="./script.js"></script>
   </body>
 </html>
