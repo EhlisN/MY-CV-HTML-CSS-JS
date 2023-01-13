@@ -1,0 +1,38 @@
+.contact {
+  background: var(--main-bg-img) no-repeat top left/cover;
+  padding-bottom: 50px;
+}
+
+.contact__items {
+  padding: 5vw 10vw;
+  margin: 0 auto;
+  background-color: var(--main-bg-color);
+}
+
+.contact__item {
+  justify-content: start;
+  margin: 30px 0;
+}
+
+.contact__item__name {
+  width: 200px;
+  font-weight: 700;
+}
+
+.contact__item__link {
+  color: var(--text-color);
+  word-wrap: break-word;
+}
+
+@media (max-width: 880px) {
+  .contact__item {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+@media (max-width: 450px) {
+  .contact {
+    font-size: 12px;
+  }
+}

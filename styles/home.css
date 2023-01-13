@@ -1,0 +1,74 @@
+.home {
+  background: var(--main-bg-img) no-repeat top left/cover;
+  padding-top: 100px;
+}
+
+.home__img {
+  height: 500px;
+  width: 50%;
+  background: url(../assets/images/photo2.png) no-repeat bottom/contain;
+}
+
+.home__desc {
+  font-size: 30px;
+}
+
+.home__name {
+  margin: 20px 0;
+  font-size: 50px;
+}
+
+.btn__cv {
+  margin: 30px 0;
+  padding: 15px 35px;
+  border-radius: 30px;
+}
+
+.cv__download {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(8, 8, 8, 0.6);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  text-align: center;
+  display: none;
+}
+
+.cv {
+  height: 100%;
+  width: 80%;
+}
+
+@media (max-width: 991px) {
+  .home__desc {
+    font-size: 22px;
+  }
+  .home__name {
+    font-size: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .home__desc {
+    max-height: fit-content;
+  }
+  .home .row {
+    flex-direction: column-reverse;
+    height: auto;
+  }
+  .home__img {
+    width: 70%;
+    position: relative;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .home__img {
+    height: 300px;
+    width: 100%;
+  }
+}

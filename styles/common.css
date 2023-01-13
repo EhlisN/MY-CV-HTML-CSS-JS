@@ -1,0 +1,105 @@
+:root {
+  --text-color: #434343;
+  --border-color: 210, 210, 210;
+  --hover-border-color: #434343;
+  --main-bg-color: #fff;
+  --action-bg-color: #f9f7f7;
+  --btn-main-color: #eeeeee;
+  --success-color: #5bbc2e;
+  --shadow-color: #434343;
+  --main-bg-img: url('../assets/images/bg-light.jpg');
+}
+
+/* Класс, добавленный к элементу <html> */
+.dark-mode {
+  --text-color: #e9e9e9;
+  --border-color: 67, 67, 67;
+  --hover-border-color: #e9e9e9;
+  --main-bg-color: #434343;
+  --action-bg-color: #363636;
+  --btn-main-color: #717171;
+  --success-color: #5bbc2e;
+  --shadow-color: #e9e9e9;
+  --main-bg-img: url('../assets/images/bg-dark.jpg');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  color: var(--text-color);
+  background-color: var(--main-bg-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+section {
+  padding-top: 50px;
+}
+
+.container {
+  max-width: 930px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.shadow {
+  box-shadow: 0 0 15px 0 var(--shadow-color);
+}
+
+.success {
+  color: var(--success-color);
+}
+
+.title {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 30px;
+}
+
+.line {
+  display: inline-block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--success-color);
+}
+
+@media (max-width: 991px) {
+  .container {
+    padding: 0 40px 0 20px;
+    width: 98%;
+    margin: 0 auto;
+  }
+  .title {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 460px) {
+  .title {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,17 @@
+.video {
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.video__cv {
+  width: 560px;
+  height: 315px;
+  margin: 0 auto;
+}
+
+@media (max-width: 620px) {
+  .video__cv {
+    width: 100%;
+    height: 50vw;
+  }
+}

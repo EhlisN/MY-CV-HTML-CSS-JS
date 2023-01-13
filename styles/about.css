@@ -1,0 +1,180 @@
+.about {
+  padding-bottom: 50px;
+}
+
+.about article {
+  padding: 20px;
+}
+
+.about h5 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.about p {
+  margin: 20px 0;
+}
+
+.about hr {
+  border-color: var(--success-color);
+  opacity: 0.7;
+}
+
+.about__nav {
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.about__nav__link {
+  margin: 1vw;
+}
+
+.about__way,
+.about__education,
+.about__exerience,
+.about__skills,
+.about__sertifications {
+  display: none;
+}
+
+.about__way {
+  display: block;
+}
+
+.skills__desc,
+.skills__certificates {
+  flex-wrap: wrap;
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.progress-bar {
+  width: 48%;
+}
+
+.progress-bar__title {
+  margin-bottom: 6px;
+}
+
+.progress-bar__line {
+  position: relative;
+  width: 100%;
+  height: 5px;
+  position: relative;
+  background-color: #efefef;
+  border-radius: 5px;
+  margin-bottom: 40px;
+}
+
+.progress-bar__line .line {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: var(--success-color);
+  border-radius: 5px;
+}
+
+.value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--success-color);
+  color: var(--success-color);
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  z-index: 3;
+  top: -12px;
+  font-size: 8px;
+  font-weight: 700;
+}
+
+.certificate {
+  width: 42%;
+  margin: 2%;
+}
+
+.certificate img {
+  width: 100%;
+  height: 100%;
+  vertical-align: bottom;
+}
+
+.certificate.show {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(8, 8, 8, 0.6);
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  padding: 2%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.certificate.show img {
+  width: 60%;
+  height: auto;
+  cursor: zoom-out;
+}
+
+.certificate:hover {
+  animation: moves 0.3s linear;
+  cursor: zoom-in;
+}
+
+@keyframes moves {
+  0% {
+  }
+  40% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(4deg);
+  }
+  100% {
+  }
+}
+
+@media (max-width: 767px) {
+  .about__item div {
+    font-size: 12px;
+  }
+  .about__nav {
+    flex-wrap: wrap;
+  }
+  .about__nav__link {
+    margin-bottom: 10px;
+  }
+  .certificate.show img {
+    width: 90%;
+    height: auto;
+  }
+  .progress-bar {
+    width: 100%;
+  }
+  .progress-bar__line {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 460px) {
+  .about h5 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+
+  .about p {
+    font-size: 12px;
+    margin: 10px 0;
+  }
+
+  .about__item div {
+    font-size: 8px;
+  }
+}

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <title>Natallia Ehlis</title>
   </head>
   <body>
@@ -16,19 +16,19 @@
       <nav class="header__menu row">
         <div class="burger__menu"></div>
         <ul class="menu row">
-          <li class="menu__item">
+          <li class="menu__item" data-section="a">
             <a class="menu__item__link focus" href="#home">HOME</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-section="b">
             <a class="menu__item__link" href="#about">ABOUT</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-section="c">
             <a class="menu__item__link" href="#portfolio">PORTFOLIO</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-section="d">
             <a class="menu__item__link" href="#video">VIDEO</a>
           </li>
-          <li class="menu__item">
+          <li class="menu__item" data-section="e">
             <a class="menu__item__link" href="#contact">CONTACT</a>
           </li>
         </ul>
@@ -85,8 +85,7 @@
             </p>
             <p>
               In October 2022 I graduated from IT Academy STEP. Where I have
-              learned such of skills as HTML&CSS(HyperText Markup Language &
-              Cascading Style Sheets), JavaScript language, Git & Github,
+              learned such of skills as HTML&CSS, JavaScript language, Git & Github,
               Preprocessor - SASS, LESS, CSS Framework - Bootstrap, Material UI,
               JS librarie - React and JS Framework Angular.
             </p>
@@ -94,8 +93,7 @@
               After completing front-end development courses, I continue to make
               projects myself and study documentation for various technologies,
               I like to watch YouTube channels Front-end Science, IT-KAMASUTRA
-              and read IT news. In the future, I would like to learn another
-              programming language.
+              and read IT news. In the future, I would like to learn the backend.
             </p>
           </article>
           <article class="education about__item about__education shadow">
@@ -258,7 +256,7 @@
         </div>
       </section>
     </main>
-    <footer class="footer row">
+    <footer class="footer row"> 
       <p>© 2023 Natallia Ehlis</p>
       <div class="footer__social row">
         <a href="https://github.com/EhlisN" target="_blank"
@@ -278,6 +276,11 @@
         /></a>
       </div>
     </footer>
-    <script src="./script.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/db/db_skills.js"></script>
+    <script src="./scripts/db/db_portfolio.js"></script>
+    <script src="./scripts/header.js"></script>
+    <script src="./scripts/about.js"></script>
+    <script src="./scripts/portfolio.js"></script>
   </body>
 </html>

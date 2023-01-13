@@ -1,0 +1,141 @@
+.btn {
+  background-color: var(--btn-main-color);
+  color: var(--text-color);
+  border: 1px solid rgba(var(--border-color), 00);
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: 700;
+  transition: box-shadow 0.5s linear;
+}
+
+.btn__success {
+  background-color: var(--success-color);
+}
+
+.btn:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 15px 0 var(--shadow-color);
+}
+
+.btn__right,
+.btn__left {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2vh;
+  font-size: 24px;
+  background-color: rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn__right:hover,
+.btn__left:hover,
+.btn__close {
+  box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.449);
+  cursor: pointer;
+}
+
+.btn__right {
+  left: 60%;
+}
+
+.btn__left {
+  left: 40%;
+}
+
+.btn__close {
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  top: 1vh;
+  left: 90vw;
+  font-size: 16px;
+}
+
+.btn__up {
+  position: fixed;
+  z-index: 15;
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  padding: 1px;
+  border-radius: 50%;
+  color: var(--text-color);
+  text-align: center;
+  top: calc(100vh - 60px);
+  left: calc(100vw - 70px);
+  font-weight: 400;
+  display: none;
+  opacity: 0.5;
+}
+
+.btn__up:hover {
+  background-color: var(--success-color);
+}
+
+.btn-zoom {
+  background: url(../assets/icons/zoom-in.png) no-repeat center/ 50%;
+}
+
+.btn-deploy {
+  background: url(../assets/icons/eye.png) no-repeat center/ 50%;
+}
+
+.btn-link {
+  background: url(../assets/icons/link.png) no-repeat center/ 40%;
+}
+
+.btn__add {
+  clear: both;
+  transition: all 0.2s;
+  width: 60px;
+  height: 60px;
+  line-height: 1;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 0;
+  cursor: pointer;
+  background-color: var(--success-color);
+}
+
+.btn__add span {
+  font-size: 30px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.btn__add:hover {
+  text-decoration: none;
+}
+
+.btn__add:hover span {
+  transform: rotate(90deg);
+}
+
+@media (max-width: 767px) {
+  .btn__close {
+    left: calc(100vw - 70px);
+  }
+}
+
+@media (max-width: 460px) {
+  .btn__close {
+    left: calc(100vw - 40px);
+    padding: 0 3px;
+    font-size: 12px;
+  }
+  .btn__right,
+  .btn__left {
+    width: 24px;
+    height: 24px;
+    font-size: 16px;
+  }
+}
