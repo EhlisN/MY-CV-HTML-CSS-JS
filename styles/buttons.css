@@ -1,7 +1,7 @@
 .btn {
-  background-color: var(--btn-main-color);
-  color: var(--text-color);
-  border: 1px solid rgba(var(--border-color), 00);
+  background-color: var(--main-btn-color);
+  color: var(--main-text-color);
+  border: 1px solid rgba(var(--main-border-color), 00);
   padding: 5px 10px;
   border-radius: 3px;
   font-weight: 700;
@@ -25,7 +25,7 @@
   border-radius: 50%;
   position: absolute;
   top: 2vh;
-  font-size: 24px;
+  font-size: calc(var(--main-fs) * 1.4);
   background-color: rgba(0, 0, 0, 0.4);
   font-weight: 700;
   display: flex;
@@ -56,7 +56,7 @@
   position: absolute;
   top: 1vh;
   left: 90vw;
-  font-size: 16px;
+  font-size: var(--main-fs);
 }
 
 .btn__up {
@@ -67,7 +67,7 @@
   height: 30px;
   padding: 1px;
   border-radius: 50%;
-  color: var(--text-color);
+  color: var(--main-text-color);
   text-align: center;
   top: calc(100vh - 60px);
   left: calc(100vw - 70px);
@@ -130,12 +130,10 @@
   .btn__close {
     left: calc(100vw - 40px);
     padding: 0 3px;
-    font-size: 12px;
   }
   .btn__right,
   .btn__left {
     width: 24px;
     height: 24px;
-    font-size: 16px;
   }
 }

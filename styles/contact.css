@@ -1,6 +1,7 @@
 .contact {
   background: var(--main-bg-img) no-repeat top left/cover;
   padding-bottom: 50px;
+  font-size: var(--main-fs);
 }
 
 .contact__items {
@@ -20,7 +21,7 @@
 }
 
 .contact__item__link {
-  color: var(--text-color);
+  color: var(--main-text-color);
   word-wrap: break-word;
 }
 
@@ -28,11 +29,5 @@
   .contact__item {
     flex-direction: column;
     align-items: start;
-  }
-}
-
-@media (max-width: 450px) {
-  .contact {
-    font-size: 12px;
   }
 }
