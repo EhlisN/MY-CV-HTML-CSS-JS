@@ -12,13 +12,13 @@
 }
 
 .logo__text {
-  color: var(--text-color);
-  font-size: 30px;
+  color: var(--main-text-color);
+  font-size: calc(var(--main-fs) * 1.8);
   border-bottom: none;
 }
 
 .menu__item__link {
-  color: var(--text-color);
+  color: var(--main-text-color);
   margin-right: 20px;
   font-size: 13px;
   font-weight: 700;
@@ -26,7 +26,7 @@
   text-transform: uppercase;
   display: block;
   padding: 6px 0;
-  border-bottom: 3px solid rgba(var(--border-color), 00);
+  border-bottom: 3px solid rgba(var(--main-border-color), 00);
   transition: all 0.5s linear;
 }
 
@@ -75,8 +75,5 @@
 @media (max-width: 460px) {
   .header {
     padding: 0 10px;
-  }
-  .logo__text {
-    font-size: 22px;
   }
 }

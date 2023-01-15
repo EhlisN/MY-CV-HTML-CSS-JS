@@ -10,12 +10,12 @@
 }
 
 .home__desc {
-  font-size: 30px;
+  font-size: calc(var(--main-fs) * 1.8);
 }
 
 .home__name {
   margin: 20px 0;
-  font-size: 50px;
+  font-size: calc(var(--main-fs) * 2.6);
 }
 
 .btn__cv {
@@ -40,15 +40,6 @@
 .cv {
   height: 100%;
   width: 80%;
-}
-
-@media (max-width: 991px) {
-  .home__desc {
-    font-size: 22px;
-  }
-  .home__name {
-    font-size: 38px;
-  }
 }
 
 @media (max-width: 767px) {
